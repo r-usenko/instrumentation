@@ -142,7 +142,7 @@ func ServerMiddleware(opts ...Option) Middleware {
 					}
 				}
 
-				l.Check(lvl, fmt.Sprintf("HTTP %s %s", r.Method, r.URL.RequestURI())).Write()
+				//l.Check(lvl, fmt.Sprintf("HTTP %s %s", r.Method, r.URL.RequestURI())).Write()
 			}(time.Now())
 
 			next.ServeHTTP(w, r)
